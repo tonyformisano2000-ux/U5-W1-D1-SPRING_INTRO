@@ -1,9 +1,6 @@
 package com.example.U5_W1_D1_SPRING_INTRO.config;
 
-import com.example.U5_W1_D1_SPRING_INTRO.model.Drinks;
-import com.example.U5_W1_D1_SPRING_INTRO.model.Menu;
-import com.example.U5_W1_D1_SPRING_INTRO.model.Pizza;
-import com.example.U5_W1_D1_SPRING_INTRO.model.Topping;
+import com.example.U5_W1_D1_SPRING_INTRO.model.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -37,4 +34,10 @@ public Topping cheese(){return new Topping(92, 0.69, "CHEESE" );}
 
     @Bean
     public Menu menu(){return new Menu(List.of(margherita(), hawaiian(), diavola()), List.of(lemonade(),water(),whine()), List.of(ham(), onion(), cheese(), pinapple(), salami()));}
+
+    @Bean
+    public Table table1(){return new Table(5,4,TableState.FREE);}
+
+    @Bean
+    public Order order1(){return new Order(table1(),OrderState.IN_PROGRESS,List.of(margherita(), water()),2,1001L);}
 }
