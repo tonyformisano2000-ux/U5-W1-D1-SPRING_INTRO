@@ -12,8 +12,8 @@ public class U5W1D1SpringIntroApplication {
 
 		ApplicationContext ctx = SpringApplication.run(U5W1D1SpringIntroApplication.class, args);
 
-		Menu menu = ctx.getBean(Menu.class);
-		System.out.println(menu);
+//		Menu menu = ctx.getBean(Menu.class);
+//		System.out.println(menu);
 
 	}
 
